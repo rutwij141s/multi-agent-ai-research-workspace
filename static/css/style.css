@@ -1,0 +1,317 @@
+/* aRe_Agent Custom Styling */
+
+/* Import Berkshire Swash font */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+/* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-light: #f8f9fa;
+    --background-white: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --border-light: #ecf0f1;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Main App Container */
+.main {
+    background-color: var(--background-light);
+    padding: 2rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.app-title {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Cards */
+.stContainer {
+    background: var(--background-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+}
+
+/* Buttons */
+.stButton > button {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.stButton > button:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.stButton > button[kind="primary"] {
+    background-color: var(--secondary-color);
+}
+
+/* Input Fields */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+/* Chat Messages */
+.stChatMessage {
+    background: var(--background-white);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.stChatMessage[data-testid="user"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stChatMessage[data-testid="assistant"] {
+    background: var(--background-white);
+    border: 1px solid var(--border-light);
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: var(--background-white);
+    border-right: 1px solid var(--border-light);
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background-color: var(--background-light);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* File Uploader */
+.stFileUploader {
+    border: 2px dashed var(--border-light);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stFileUploader:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* Progress Bar */
+.stProgress > div > div > div {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px 8px 0 0;
+    padding: 12px 24px;
+    font-weight: 500;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Alerts */
+.stAlert {
+    border-radius: 8px;
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Select Box */
+.stSelectbox > div > div {
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+}
+
+/* Radio Buttons */
+.stRadio > div {
+    gap: 1rem;
+}
+
+/* Markdown Content */
+.element-container p {
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Code Blocks */
+code {
+    background-color: var(--background-light);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--border-light);
+}
+
+/* Links */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Spacing */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* Agent Cards */
+.agent-card {
+    background: var(--background-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.agent-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+/* Status Indicators */
+.status-processing {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.status-success {
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.status-error {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-light);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-light);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-title {
+        font-size: 2rem;
+    }
+    
+    .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .stButton > button {
+        width: 100%;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Loading Spinner */
+.stSpinner > div {
+    border-top-color: var(--secondary-color) !important;
+}
+
+/* Info/Warning/Error Boxes */
+.stInfo {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.stWarning {
+    background-color: rgba(241, 196, 15, 0.1);
+    border-left: 4px solid #f1c40f;
+}
+
+.stError {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid var(--accent-color);
+}
+
+.stSuccess {
+    background-color: rgba(39, 174, 96, 0.1);
+    border-left: 4px solid #27ae60;
+}
